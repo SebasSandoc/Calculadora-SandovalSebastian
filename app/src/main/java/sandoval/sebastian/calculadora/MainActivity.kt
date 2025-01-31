@@ -78,5 +78,70 @@ class MainActivity : AppCompatActivity() {
             Screen.setText(operation)
         }
 
+        bt9.setOnClickListener{
+            operation+="9"
+            Screen.setText(operation)
+        }
+
+        bt9.setOnClickListener{
+            operation+="9"
+            Screen.setText(operation)
+        }
+        bt0.setOnClickListener{
+            operation+="0"
+            Screen.setText(operation)
+        }
+        btAdd.setOnClickListener{
+            operation+="+"
+            Screen.setText(operation)
+        }
+        btSubstract.setOnClickListener{
+            operation+="-"
+            Screen.setText(operation)
+        }
+        btMultiply.setOnClickListener{
+            operation+="*"
+            Screen.setText(operation)
+        }
+        btDivide.setOnClickListener{
+            operation+="/"
+            Screen.setText(operation)
+        }
+        btClear.setOnClickListener{
+            operation=""
+            Screen.setText(operation)
+        }
+        btResult.setOnClickListener{
+            if(operation.contains('+')){
+                var (str1,str2) = operation.split('+')
+                val num1 = str1.toInt()
+                val num2 = str2.toInt()
+                val res = num1+num2
+                Screen.setText(res.toString())
+            }else if(operation.contains('-')){
+                val (str1,str2) = operation.split('-')
+                val num1 = str1.toInt()
+                val num2 = str2.toInt()
+                val res = num1-num2
+                Screen.setText(res.toString())
+            }else if(operation.contains('*')){
+                val (str1,str2) = operation.split('*')
+                val num1 = str1.toInt()
+                val num2 = str2.toInt()
+                val res = num1*num2
+                Screen.setText(res.toString())
+            }else if(operation.contains('/')){
+                val (str1,str2) = operation.split('/')
+                val num1 = str1.toInt()
+                val num2 = str2.toInt()
+                val res = num1/num2
+                Screen.setText(res.toString())
+            }else{
+                Screen.setText("")
+                operation=""
+            }
+
+        }
+
     }
 }
