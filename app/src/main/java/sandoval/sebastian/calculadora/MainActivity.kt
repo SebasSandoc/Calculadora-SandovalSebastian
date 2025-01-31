@@ -58,5 +58,25 @@ class MainActivity : AppCompatActivity() {
             Screen.setText(operation)
         }
 
+        bt5.setOnClickListener {
+            operation+="5"
+            Screen.setText(operation)
+        }
+
+        bt6.setOnClickListener {
+            operation+="6"
+            Screen.setText(operation)
+        }
+
+        bt7.setOnClickListener {
+            operation+="7"
+            Screen.setText(operation)
+        }
+
+        bt8.setOnClickListener {
+            operation+="8"
+            Screen.setText(operation)
+        }
+
     }
 }
